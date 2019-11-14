@@ -76,7 +76,8 @@ document.getElementById('start-game-button').onclick = () => {
   hangmanCanvas = new HangmanCanvas(wordToPlay);
   hangmanCanvas.createBoard();
   hangmanCanvas.drawLines();
-  
+  hangmanCanvas.drawHangman('leftLeg')
+
 };
 
 document.onkeydown = (e) => {

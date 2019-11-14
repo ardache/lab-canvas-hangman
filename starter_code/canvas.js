@@ -47,7 +47,36 @@ class HangmanCanvas {
   }
 
   drawHangman(shape) {
-
+    switch (shape){
+      case 'leftLeg': 
+        this.ctx.moveTo(115, 590);
+        this.ctx.lineTo(125, 560);
+        this.ctx.stroke();
+       // break
+      case 'rightLeg': 
+       this.ctx.moveTo(125, 560);
+       this.ctx.lineTo(135, 590);
+       this.ctx.stroke();
+      // break
+      case 'base': 
+        this.ctx.beginPath();
+        this.ctx.moveTo(20, 650);
+        this.ctx.lineTo(160, 650);
+        this.ctx.stroke();
+        //break
+      case 'poste': 
+        this.ctx.moveTo(60, 650);
+        this.ctx.lineTo(60, 450);
+        this.ctx.stroke();
+        //break
+      case 'trave': 
+        this.ctx.moveTo(60, 450);
+        this.ctx.lineTo(130, 450);
+        this.ctx.stroke();
+        //break
+      
+      
+    }
   }
 
   gameOver() {
