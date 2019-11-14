@@ -49,32 +49,75 @@ class HangmanCanvas {
   drawHangman(shape) {
     switch (shape){
       case 'leftLeg': 
+        this.ctx.beginPath();
         this.ctx.moveTo(115, 590);
         this.ctx.lineTo(125, 560);
         this.ctx.stroke();
-       // break
+        this.ctx.closePath();
+        break
       case 'rightLeg': 
+        this.ctx.beginPath();
        this.ctx.moveTo(125, 560);
        this.ctx.lineTo(135, 590);
        this.ctx.stroke();
-      // break
+       this.ctx.closePath();
+       break
+      case 'body': 
+        this.ctx.beginPath();
+       this.ctx.moveTo(125, 560);
+       this.ctx.lineTo(125, 520);
+       this.ctx.stroke();
+       this.ctx.closePath();
+       break
+      case 'leftArm': 
+        this.ctx.beginPath();
+        this.ctx.moveTo(125, 530);
+        this.ctx.lineTo(105, 520);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        break
+      case 'rightArm': 
+        this.ctx.beginPath();
+        this.ctx.moveTo(125, 530);
+        this.ctx.lineTo(145, 520);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        break
+      case 'head': 
+        this.ctx.beginPath();
+        this.ctx.moveTo(139, 505);
+        this.ctx.arc(125, 505, 15,  0, Math.PI * 2);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        break
       case 'base': 
         this.ctx.beginPath();
         this.ctx.moveTo(20, 650);
         this.ctx.lineTo(160, 650);
         this.ctx.stroke();
-        //break
-      case 'poste': 
+        this.ctx.closePath();
+        break
+      case 'pole': 
+        this.ctx.beginPath();
         this.ctx.moveTo(60, 650);
         this.ctx.lineTo(60, 450);
         this.ctx.stroke();
-        //break
-      case 'trave': 
+        this.ctx.closePath();
+        break
+      case 'joist': 
+        this.ctx.beginPath();
         this.ctx.moveTo(60, 450);
         this.ctx.lineTo(130, 450);
         this.ctx.stroke();
-        //break
-      
+        this.ctx.closePath();
+        break
+      case 'rope': 
+        this.ctx.beginPath();
+        this.ctx.moveTo(130, 450);
+        this.ctx.lineTo(130, 493);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        break
       
     }
   }

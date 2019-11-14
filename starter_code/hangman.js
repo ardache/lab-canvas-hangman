@@ -2,12 +2,12 @@ let hangman;
 
 class Hangman {
    constructor() {
-    this.words = ['casa','perro','silla'];
+    this.words = ['house','dog','chair','ironhack'];
     this.secretWord = "";
     this.letters = [];
     this.guessedLetter = "";
     this.errorsLeft = 10;
-  
+    this.shapes = ['rope','joist','pole','base','leftLeg','rightLeg','body','leftArm','rightArm','head',]
    }
 
   getWord() {
@@ -76,7 +76,7 @@ document.getElementById('start-game-button').onclick = () => {
   hangmanCanvas = new HangmanCanvas(wordToPlay);
   hangmanCanvas.createBoard();
   hangmanCanvas.drawLines();
-  hangmanCanvas.drawHangman('leftLeg')
+  
 
 };
 
@@ -97,7 +97,9 @@ document.onkeydown = (e) => {
           }
         } else {
           hangman.addWrongLetter(letter);
+          hangmanCanvas.drawHangman(hangman.shapes[hangman.errorsLeft])
           hangmanCanvas.writeWrongLetter(letter, hangman.errorsLeft);
+          
           if (hangman.checkGameOver()) {
             // hangmanCanvas.gameOver();
           } else {
